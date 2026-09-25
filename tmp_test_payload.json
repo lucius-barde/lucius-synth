@@ -1,0 +1,6 @@
+{
+  "title": "Test Song",
+  "tempo": 100,
+  "meter": "4/4",
+  "abcNotation": "X:1\nT:Test Song\nM:4/4\nL:1/16\nQ:1/4=100\nK:C\nV:1 name=\"Piste 1\" %%MIDI program 0\n%lucius-track muted=0 solo=0 instrument=piano\nC4 D4 E4 F4 |]\n"
+}

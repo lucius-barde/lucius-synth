@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+    --background: #324661;
+    --background-secondary: var(--color-blue-100);
+    --background-tertiary: #fff;
+    --foreground: #252B33;
+    --borders: var(--color-blue-100);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171717;
+    --background-secondary: #272727;
+    --foreground: var(--color-gray-100);
+  }
+}
+
+body {
+  background: var(--body-background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom styles */
+
+
+body{
+  background-color: var(--background-secondary);
+}
+
+header, main, footer{
+	background-color: var(--background);
+}
+
+h2{
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-left: 8px;
+}
+
+h3{
+	font-size: 1.15em;
+	font-weight: bold;
+	font-style: italic;
+
+}
+
+@media screen and (min-width: 1180px){
+    .lucius-site-width-wrapper{
+
+    }
+}
+
+main{
+  background-color: var(--background-tertiary);
+}
+
+#lucius-logo{
+  width:64px;
+  height:64px;
+  background-color:#ffffff;
+  border-radius: 50%;
+}
+article.post{
+	border: 1px solid var(--borders);
+	border-radius: 8px;
+	padding:8px;
+}
+
+div.admin-table-wrapper{
+    max-height:300px;
+    overflow-y:auto;
+}
+
+nav ul li a{
+    color:#fff;
+}
+
+button{
+    cursor:pointer;
+    background-color: var(--color-blue-100);
+    color: var(--color-black);
+}
+
+
+button:hover, button:active, nav ul a.bg-blue-100:hover, nav ul a.bg-blue-100:active, a.button-link:hover, a.button-link:active{
+    cursor:pointer;
+    background-color: var(--color-blue-200);
+    color: var(--color-black);
+    transition: 0.25s;
+}
+
+button.primary, a.button-link.primary{
+    background-color: var(--background);
+    color:#fff;
+}
+
+button.primary:hover, button.primary:active, a.button-link.primary:hover, a.button-link.primary:active{
+    background-color: var(--foreground);
+    color:#fff;
+    transition: 0.25s;
+}
+
+footer{
+    color: #fff;
+}
+
+dialog{
+    background-color: var(--background);
+    color: #fff;
+    box-shadow: 3px 3px 1px var(--foreground);
+}
+
+.lucius-dynamic-content{
+  animation: luciusFadeIn 0.5s ease-in-out;
+}
+.lucius-loader{
+	overflow:hidden;
+	padding:20px;
+}
+.lucius-loader-element {
+	margin:auto;
+  width: 40px;
+  padding: 8px;
+  aspect-ratio: 1;
+  height:40px;
+  border-radius: 50%;
+  opacity:0.3;
+  background: var(--foreground);
+  --_m:
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+@keyframes luciusFadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

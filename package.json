@@ -11,7 +11,7 @@
   "dependencies": {
     "abcjs": "^6.7.0",
     "@supabase/supabase-js": "^2.57.4",
-    "next": "^15.3.3",
+    "next": "15.3.8",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tone": "^15.1.22"
